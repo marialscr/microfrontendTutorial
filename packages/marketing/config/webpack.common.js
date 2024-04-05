@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 Babel procesa los ficheros js y jsx, transforma ES6 y otros años y los transforma en ES5 para el navegador y agrega más características 
 
-
 */
 
 module.exports = {

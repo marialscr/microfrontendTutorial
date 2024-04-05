@@ -7,7 +7,7 @@ const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js', // Asegura que el nombre del fichero sea así por temas de cache
-        publicPath: '/auth/latests/'
+        publicPath: '/auth/latest/'
     },
     plugins: [
         new ModuleFederationPlugin({

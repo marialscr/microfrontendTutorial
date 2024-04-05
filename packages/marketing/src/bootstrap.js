@@ -3,8 +3,11 @@ import ReactDOM  from 'react-dom';
 import App from './App';
 import { createMemoryHistory, createBrowserHistory } from 'history';
 
-const mount = (element, { onNavigate, defaultHistory }) => {
-    const history = defaultHistory || createMemoryHistory();
+const mount = (element, { onNavigate, defaultHistory, initialPath }) => {
+    // default history for development (its a browser history) and a memory history for microfrontend when in container
+    const history = defaultHistory || createMemoryHistory({
+        initialEntries: [ initialPath ]
+    });
     
     if(onNavigate) {
         history.listen(onNavigate);
